@@ -11,6 +11,8 @@ jobs:
     - uses: android-actions/setup-android@v3
       with:
         cmdline-tools-version: 9477386
+        # The default list asks for the old "tools" package, which the SDK repository no longer has
+        packages: platform-tools
 
     - uses: actions/setup-java@v4
       with:
